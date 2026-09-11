@@ -1,8 +1,8 @@
 # Coleta e Preparação de Dados em Saúde — Zika (SP) + IBGE
 
-Projeto de **aquisição e preparação de dados** a partir de duas fontes de naturezas diferentes — um arquivo público de saúde e uma API oficial — com foco no que acontece **antes** da análise: coletar, inspecionar, limpar, documentar e integrar dados brutos até que se possa confiar neles.
+Projeto de **aquisição e preparação de dados** a partir de duas fontes de naturezas diferente, um arquivo público de saúde e uma API oficial com foco no que acontece **antes** da análise: coletar, inspecionar, limpar, documentar e integrar dados brutos até que se possa confiar neles.
 
-> A ideia central que guia o projeto: **a qualidade do dado começa na coleta, não no pré-processamento.**
+> A ideia central que guia o projeto: **a qualidade do dado começa na coleta e não no pré-processamento.**
 
 Este trabalho nasceu como atividade da disciplina de Aquisição e Preparação de Dados (Ciência de Dados — FMU), mas foi conduzido como um pequeno projeto de engenharia de dados, com decisões justificadas em cada etapa.
 
@@ -33,7 +33,7 @@ Ambas são bases públicas e de acesso livre.
 
 **1. Estação A — Arquivo local (Zika/DATASUS).** O CSV do TabNet não é uma tabela limpa, e sim um relatório com a tabela no meio. Foram tratados: codificação Latin-1, separador `;`, 4 linhas de título e 22 de rodapé, uma linha de "Total" agregada aos dados (removida por regra, não por posição) e um campo que unia código IBGE e nome do município (dividido em duas colunas). Resultado salvo em UTF-8, separado por vírgula.
 
-**2. Estação B — API (IBGE).** A resposta JSON (lista de 645 municípios, com camadas geográficas aninhadas) foi reduzida ao essencial — código e nome. O código do IBGE (7 dígitos, com dígito verificador) foi padronizado para o formato de 6 dígitos usado pelo DATASUS, e convertido para texto, para permitir o cruzamento.
+**2. Estação B — API (IBGE).** A resposta JSON (lista de 645 municípios, com camadas geográficas aninhadas) foi reduzida ao essencial , o código e nome. O código do IBGE (7 dígitos, com dígito verificador) foi padronizado para o formato de 6 dígitos usado pelo DATASUS, e convertido para texto, para permitir o cruzamento.
 
 **3. Integração (etapa extra).** As duas tabelas foram cruzadas pelo código do município via *join* interno. O resultado retornou exatamente as 55 linhas esperadas, validando a padronização: todos os códigos encontraram correspondência. O cruzamento evidenciou por que a junção foi feita por código, e não por nome (grafias como "ARACATUBA" e "Araçatuba" não casariam por texto).
 
@@ -59,6 +59,6 @@ Ambas são bases públicas e de acesso livre.
 
 ## Autor
 
-**Kaike Martins Pereira** — Estudante de Ciência de Dados (FMU São Paulo), em transição de Analista de Vendas para a área de dados. Buscando estágio em dados / BI.
+**Kaike Martins Pereira** — Estudante de Ciência de Dados (FMU São Paulo).
 
 [LinkedIn](https://linkedin.com/in/kaikemarttins) · [GitHub](https://github.com/kaike-martins)
