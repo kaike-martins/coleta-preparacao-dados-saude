@@ -2,6 +2,13 @@
 
 Projeto de **aquisição e preparação de dados** a partir de duas fontes de naturezas diferente, um arquivo público de saúde e uma API oficial com foco no que acontece **antes** da análise: coletar, inspecionar, limpar, documentar e integrar dados brutos até que se possa confiar neles.
 
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![pandas](https://img.shields.io/badge/pandas-150458?style=flat-square&logo=pandas&logoColor=white)
+![requests](https://img.shields.io/badge/requests-20232A?style=flat-square)
+![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=flat-square&logo=jupyter&logoColor=white)
+![Fonte](https://img.shields.io/badge/Fonte-SINAN%2FDATASUS-4B1D72?style=flat-square)
+![FMU](https://img.shields.io/badge/FMU-Aquisicao_e_Preparacao_de_Dados-4B1D72?style=flat-square)
+
 > A ideia central que guia o projeto: **a qualidade do dado começa na coleta e não no pré-processamento.**
 
 Este trabalho nasceu como atividade da disciplina de Aquisição e Preparação de Dados (Ciência de Dados — FMU), mas foi conduzido como um pequeno projeto de engenharia de dados, com decisões justificadas em cada etapa.
